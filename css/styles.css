@@ -1,0 +1,514 @@
+:root{
+    --fuente-principal: 3.8rem;
+    --fuente-light: 'Saira', sans-serif;
+    --nardogrey: #c0c6c8;
+    
+}
+
+/* root = custom properties - creo variables que css no tiene*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* 1 rem = 10px */
+
+/*Para que se adapte a mas pantallas*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /*Termina el hack*/
+body{
+    font-size: 16px;
+    font-family: 'Saira';
+    font-weight: bold;
+    /*background-image: linear-gradient(to top, var(--nardogrey) 0%, #ffffff 100%);  /*color-imagen de fondo siempre en el body*/ 
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1,h2,h3{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ----------- HEADER ---------------*/
+
+
+.header-class{
+    padding-top: 2.5rem;
+    background: rgba(255,255,255,0.35);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    /* backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px); */
+    border-radius: 10px;
+
+}
+.titulo{
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    margin: 0;
+
+}
+.subtitulo{
+    margin-top: 1rem;
+    font-family: 'Lora', serif;
+    font-weight: normal;
+
+}
+
+.contenedor{
+    /*max-width: 120rem; /*max asi toma como maximo ese valor y no fijo, si no cuando achico la pantalla se come contenido*/
+    margin-top: 0;          /*margin indica la posicion del objeto = SEPARACION*/
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto; 
+    border-radius: 1rem;
+    width: min(95%, 120rem); /*para que no ocupe todo el espacio*/
+    margin: 0 auto; /*centrar horizontalmente*/
+    
+
+    margin: 0 auto 2rem auto;
+}
+
+
+@media (min-width: 768px) { 
+    .header-class{
+        padding-top: 2.5rem;
+        background: rgba(255,255,255,0.35);
+        box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+        /* backdrop-filter: blur(3.9px);
+        -webkit-backdrop-filter: blur(3.9px); */
+        border-radius: 10px;
+    
+    }
+    .titulo{
+        font-size: var(--fuente-principal);
+        font-family: 'Lora', serif;
+        font-weight: 600;
+        margin: 0;
+    
+}
+    .subtitulo{
+        margin: 0;
+        font-family: 'Lora', serif;
+        font-weight: normal;
+    
+    }
+
+    .contenedor{
+        /*max-width: 120rem; /*max asi toma como maximo ese valor y no fijo, si no cuando achico la pantalla se come contenido*/
+        margin-top: 0;          /*margin indica la posicion del objeto = SEPARACION*/
+        margin-right: auto;
+        margin-bottom: 2rem;
+        margin-left: auto; 
+        border-radius: 1rem;
+        width: min(95%, 120rem); /*para que no ocupe todo el espacio*/
+        margin: 0 auto; /*centrar horizontalmente*/
+        
+    
+        margin: 0 auto 2rem auto;
+    }
+}
+    
+
+
+
+
+
+
+.icon-head1{
+    opacity: 1;
+    position: absolute;
+    top: 15%;
+    left: 88%;
+}
+
+.icon-head2{
+    opacity: 100%;
+    position: absolute;
+    top: 15%;
+    left: 80%;
+}
+
+.icon-head1:hover{
+    opacity: 0;
+}
+
+.icon-head2:hover{
+    opacity: 0;
+}
+
+
+@media (min-width: 768px) { 
+    .icon-head1{
+        position: absolute;
+        left: 72%;
+        top: 10%;
+        transition: all 0.3s ease-in;
+        opacity: 1;
+    }
+    
+    .icon-head1:hover{
+        transform: scale(1.10);
+        opacity: 1;
+    }
+    
+    .icon-head2{
+        position: absolute;
+        left: 75%;
+        top: 10%;
+        transition: all 0.3s ease-in;
+        opacity: 1;
+    }
+    
+    .icon-head2:hover{
+        transform: scale(1.10);
+        opacity: 1;
+    }
+}
+
+
+
+ /* ----------- NAVEGACION ---------------*/
+
+
+
+/* .nav-bg{
+    background-image: url(https://d3ugyf2ht6aenh.cloudfront.net/stores/018/764/products/screen-shot-2019-09-24-at-14-51-261-6453b2ddabaf0bfd9c15693477346282-1024-1024.png);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+} */
+.navegacion-principal{
+    /* margin-top: 3rem;  */
+    display: flex;  /*empiezo a acomodar el texto, lo hago de aca, el padre*/
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 0; /*asi la imagen queda pegada a la bar*/
+    margin-top: 1.5rem;
+}
+
+/*tamaño celular*/
+@media (min-width: 480px) { 
+    
+}
+
+/*tamañno tablet*/
+@media (min-width: 768px) { /*cuando la resolucion sea mayor a 768px, se muestra normal y no en column*/
+    .navegacion-principal{
+        flex-direction: row; /*a partir de 768+ se hace row*/
+    }
+}
+
+/*laptop y pc*/
+@media (min-width: 1140px) { 
+    
+}
+
+/*mas grande*/
+@media (min-width: 1400px) { 
+    
+}
+
+.navegacion-principal a { /*color de los enlaces (a) osea el texto*/
+    font-family: 'Saira';
+    color: black;
+    text-decoration: none; /*sacar la linea de abajo del texto*/
+    font-weight: 700;
+    font-size: 1.7rem;
+    padding: 1rem;  /*es igual que poner arriba 1 abajo 1 etc*/
+    transition: all 0.2s ease-in;
+}
+.navegacion-principal a:hover{
+    transform: scale(1.10); /*el texto se hace mas grande*/
+    /*PERO NO SE MUEVE LA PAGINA!!!!*/
+
+}
+
+
+/* @media (min-width: 768px) { 
+    .icon-nav1{
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+       
+    }
+
+    .icon-nav2{
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 200%;
+    }
+
+    .icon-nav1:hover{
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+       
+    }
+
+    .icon-nav2:hover{
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 200%;
+    }
+} */
+
+/* ----------- IMAGEN ---------------*/
+/*imagen y su contenido*/
+
+.hero{ 
+    
+    background-image: url(../img/yo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+    /*padding: 15rem; /*para acomodar el texto mas abajo*/
+    position: relative; /*el padre siempre tiene q tener relative*/
+    max-width: 120rem; /*max asi toma como maximo ese valor y no fijo, si no cuando achico la pantalla se come contenido*/
+    margin-top: 0;          /*margin indica la posicion del objeto = SEPARACION*/
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: auto; 
+    border-radius: 1rem;
+    width: min(90%, 120rem); /*para que no ocupe todo el espacio*/
+    margin: 0 auto; /*centrar horizontalmente*/
+    
+
+    margin: 0 auto 2rem auto;
+    
+    
+    
+}
+
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6); /*opcion vieja efecto transparencia*/
+    /* background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /*opacity: 0.5; */
+    width: 100%;
+    height: 100%;
+/*alinear y centrar*/
+    /* display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center; */
+    border-radius: 1rem;
+    
+}
+
+
+.contenido-hero h2{
+    text-align: center;
+    padding-top: 10rem;
+    font-size: 5rem;
+    color: white;
+    opacity: 0.15;
+}
+
+
+.contenido-hero p {
+    padding-bottom: 0;
+    color: white;
+}
+    
+
+.boton {
+    color: black;
+    background: white;
+    padding: 1rem 3rem;  /*arriba derecha abajo izquierda*/
+    margin-top: 1.5rem;
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem; /*redondea los bordes*/
+    transition: all 0.2s ease-in-out;
+    border: none;
+    
+
+}
+
+
+  
+
+
+.sombra{
+    /* -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.61);
+    -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.61);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    background-color: white;
+    padding: 2rem; */
+
+    background: rgba(255,255,255,0.35);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    /* backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px); */
+    border-radius: 10px;
+    padding: 2rem;
+
+}
+
+
+.boton:hover{
+  box-shadow: 0 0px 25px rgba(0, 255, 255, 0.7);
+  cursor: pointer;
+} 
+
+
+
+/* ----------- SECCION MIS HABILIDADES ---------------*/
+
+.servicios, .navegacion-principal, .formulario, .contenedor-campos{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) { 
+    .servicios{
+        display: grid;
+    /*grid-template-columns: 33.3% 33.3% 33.3%; /*el total es 100, divido cada grid en 33 para que quede simetrico*/
+        grid-template-columns: repeat(3, 1fr); /*parte superior e inferior*/
+        column-gap: 1rem; /*es como el margen entre columnas*/
+    }
+}
+
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.servicio{   /*iconos de habilidades*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*centrar los iconos*/
+}
+
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+/* .iconos{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -60px 0 0 -60px;
+} */
+
+.iconos:hover{
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+
+/* -----------  EXPERIENCIA  ---------------*/
+
+.experiencia{
+    text-align: center;
+}
+
+
+.imagen-exp{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+
+
+/* ----------- ACERCA DE  ---------------*/
+
+.imagen-unlp{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+footer{
+    text-align: center;
+}
+
+
+.acercade{
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    /* font-weight: 400; */
+    color: black;
+    text-align: center;
+}
+
+
+.light{
+    font-family: 'Saira', sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
