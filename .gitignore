@@ -1,2 +1,17 @@
 #backup
 backup.html
+./IaC/.terraform
+.terraform
+.terraform.lock.hcl
+.hcl
+.conf
+.db
+.tfstate
+.tfstate.backup
+.tfvars
+.tfplan
+.tfout
+.tfenv
+.terraformrc
+.terraformignore    
+
