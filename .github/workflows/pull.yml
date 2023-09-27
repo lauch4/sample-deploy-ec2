@@ -15,4 +15,4 @@ jobs:
 
       - name: SSH y Git Pull en el Servidor
         run: |
-          ssh lautaro@192.168.0.82 'cd /home/lautaro/composes/apache/lautaro-landing && git pull'
+          ssh usuario@server 'cd /home/lautaro/composes/apache/lautaro-landing && git pull'
