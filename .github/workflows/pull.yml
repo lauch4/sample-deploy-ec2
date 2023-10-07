@@ -25,6 +25,5 @@ jobs:
 
       - name: Git pull
         run: |
-            cd $GITHUB_WORKSPACE  # Cambia al directorio de trabajo de GitHub Actions
             cd $(cat $GITHUB_PATH)  # Cambia al directorio definido en $GITHUB_PATH
             sudo git pull
