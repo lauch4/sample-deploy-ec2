@@ -55,13 +55,10 @@ resource "aws_instance" "web_server" {
               sudo apt-get install -y docker.io
 
               # Copiar docker-compose.yml desde tu máquina local a la instancia
-              mkdir -p /home/ubuntu/docker/codigo
-              rsync C:\Users\Lautaro\OneDrive\Desarrollo Web\lautaro-landing\IaC\docker-compose.yml /home/ubuntu/docker/
-              rsync -r  C:\Users\Lautaro\OneDrive\Desarrollo Web\lautaro-landing\codigo /home/ubuntu/docker/codigo
+              
 
               # Iniciar el contenedor Docker con docker-compose
-              cd /home/ubuntu/docker
-              sudo docker-compose up -d
+              
               EOF
 }
 
