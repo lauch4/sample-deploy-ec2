@@ -46,7 +46,7 @@ body{
     font-family: 'Saira';
     font-weight: bold;
     /*background-image: linear-gradient(to top, var(--nardogrey) 0%, #ffffff 100%);  /*color-imagen de fondo siempre en el body*/ 
-    background-image: url(lautaro-landing\codigo\img\fondo.jpg);
+    background-image: url(lautaro-landing/codigo/img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
