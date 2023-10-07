@@ -14,4 +14,4 @@ backup.html
 .tfenv
 .terraformrc
 .terraformignore    
-
+./IaC/
