@@ -22,5 +22,5 @@ jobs:
 
       - name: Git pull
         run: |
-          cd /home/admin/lautaro-landing/
+          cd /sitio/lautaro-landing/
           sudo git pull
