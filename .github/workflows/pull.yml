@@ -16,8 +16,8 @@ jobs:
       - name: Connect to EC2 instance
         uses: appleboy/ssh-action@master
         with:
-          host: 54.162.120.219
-          username: admin
+          host: ${{ secrets.HOST_IP }}
+          username: ${{ secrets.USER }}
           key: ${{ secrets.EC2_WEB_PRIVATE_KEY }}   
           script: |
             cd /sitio/lautaro-landing/
