@@ -15,4 +15,3 @@ backup.html
 .terraformrc
 .terraformignore    
 ./IaC/
-./github/
