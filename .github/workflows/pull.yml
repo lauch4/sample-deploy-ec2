@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Connect to EC2 instance
+        uses: appleboy/ssh-action@master
+        with:
+          host: 54.162.120.219
+          username: admin
+          key: ${{ secrets.EC2_WEB_PRIVATE_KEY }}
+      
+      - name: Set working directory
+        run: echo "/sitio/lautaro-landing/" >> $GITHUB_PATH    
+
+      - name: Git pull
+        run: |
+            cd $GITHUB_WORKSPACE  # Cambia al directorio de trabajo de GitHub Actions
+            cd $(cat $GITHUB_PATH)  # Cambia al directorio definido en $GITHUB_PATH
+            sudo git pull
