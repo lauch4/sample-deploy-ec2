@@ -22,5 +22,5 @@ jobs:
 
       - name: Git pull
         run: |
-          cd /home/debian/sitio/lautaro-landing
+          cd /home/debian/sitio/lautaro-landing/
           sudo git pull
