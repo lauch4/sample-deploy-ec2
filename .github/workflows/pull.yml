@@ -18,12 +18,9 @@ jobs:
         with:
           host: 54.162.120.219
           username: admin
-          key: ${{ secrets.EC2_WEB_PRIVATE_KEY }}
-      
-      - name: Set working directory
-        run: echo "/sitio/lautaro-landing/" >> $GITHUB_PATH    
-
-      - name: Git pull
-        run: |
-            cd $(cat $GITHUB_PATH)  # Cambia al directorio definido en $GITHUB_PATH
+          key: ${{ secrets.EC2_WEB_PRIVATE_KEY }}   
+          script: |
+            cd /sitio/lautaro-landing/
             sudo git pull
+
+      
