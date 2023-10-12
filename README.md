@@ -1,4 +1,4 @@
-Mi primer pagina web
+Mi pagina web personal de prueba
 
 Para deploy en AWS con Terraform y CI/CD con Github Actions
 # lautaro-landing
