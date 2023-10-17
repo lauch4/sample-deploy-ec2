@@ -4,11 +4,10 @@ module "ec2_instance" {
   name = "single-instance"
 
   instance_type          = "t2.micro"
-  ami = 
-  key_name               = "user1"
+  ami                    = "ami-06db4d78cb1d3bbf9"
+  key_name               = "web-victus"
   monitoring             = true
-  vpc_security_group_ids = ["sg-12345678"]
-  subnet_id              = "subnet-eddcdzz4"
+  vpc_security_group_ids = ["sg-0090e4169f256dc56"]
 
   tags = {
     Terraform   = "true"
