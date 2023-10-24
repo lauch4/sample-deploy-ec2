@@ -7,6 +7,7 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   key_name      = "web-tf-ec2" # Sustituye por tu par de claves
   subnet_id     = "subnet-04d5de9fe1f40135b" # Sustituye por la ID de tu subred pública
+  vpc_security_group_ids = ["sg-0090e4169f256dc56"] # Replace with the ID of the security group you want to attach
 
   user_data = <<-EOF
               #!/bin/bash
@@ -24,6 +25,6 @@ resource "aws_instance" "example" {
               EOF
 
   tags = {
-    Name = "web-tf"
+    Name = "web-tf-1"
   }
 }
